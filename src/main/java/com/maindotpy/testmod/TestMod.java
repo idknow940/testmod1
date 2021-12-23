@@ -1,5 +1,6 @@
 package com.maindotpy.testmod;
 
+import com.maindotpy.testmod.block.ModBlocks;
 import com.maindotpy.testmod.item.ModItems;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -28,6 +29,7 @@ public class TestMod
     public TestMod() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModItems.register(eventBus);
+        ModBlocks.register(eventBus);
         eventBus.addListener(this::setup);
         MinecraftForge.EVENT_BUS.register(this);
     }
