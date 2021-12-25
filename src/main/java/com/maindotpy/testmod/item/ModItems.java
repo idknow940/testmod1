@@ -11,7 +11,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, TestMod.MOD_ID);
     public static final RegistryObject<Item> SOUL_ITEM = ITEMS.register("soul",
-            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.MOD_TAB)));
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }
